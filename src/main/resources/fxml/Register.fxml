@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="app.RegisterController"
+           stylesheets="/css/register.css"
+           styleClass="overlay"
+           prefWidth="420"
+           prefHeight="620">
+
+    <VBox fx:id="dialog"
+          alignment="CENTER"
+          spacing="18"
+          styleClass="dialog">
+
+        <Label text="Utwórz konto"
+               styleClass="title"/>
+
+        <Label text="Zarejestruj się w aplikacji"
+               styleClass="subtitle"/>
+
+        <TextField fx:id="emailField"
+                   promptText="Email"
+                   styleClass="input"/>
+
+        <PasswordField fx:id="passwordField"
+                       promptText="Hasło"
+                       styleClass="input"/>
+
+        <!-- CHOICEBOX: ROLA -->
+        <ChoiceBox fx:id="roleChoice"
+                   styleClass="choice"/>
+
+        <!-- CHOICEBOX: SPECJALIZACJA -->
+        <ChoiceBox fx:id="specializationChoice"
+                   styleClass="choice"/>
+
+        <Button text="Dodaj specjalizację"
+                onAction="#openAddSpecialization"
+                styleClass="secondary-button"/>
+
+        <TextField fx:id="firstNameField"
+                   promptText="Imię"
+                   styleClass="input"/>
+
+        <TextField fx:id="lastNameField"
+                   promptText="Nazwisko"
+                   styleClass="input"/>
+
+        <TextField fx:id="peselField"
+                   promptText="PESEL (tylko pacjent)"
+                   styleClass="input"/>
+
+        <Button text="Zarejestruj się"
+                onAction="#handleRegister"
+                styleClass="primary-button"/>
+
+        <Button text="Powrót do logowania"
+                onAction="#backToLogin"
+                styleClass="secondary-button"/>
+
+        <Label fx:id="messageLabel"
+               styleClass="error"/>
+
+    </VBox>
+</StackPane>

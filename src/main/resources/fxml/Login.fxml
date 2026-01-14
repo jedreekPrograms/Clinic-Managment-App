@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="app.LoginController"
+           stylesheets="/css/login.css"
+           styleClass="overlay"
+           prefWidth="420"
+           prefHeight="520">
+
+    <VBox fx:id="dialog"
+          alignment="CENTER"
+          spacing="22"
+          styleClass="dialog">
+
+        <Label text="Zaloguj się"
+               styleClass="title"/>
+
+        <Label text="Zaloguj się do aplikacji"
+               styleClass="subtitle"/>
+
+        <TextField fx:id="emailField"
+                   promptText="Email"
+                   styleClass="input"/>
+
+        <PasswordField fx:id="passwordField"
+                       promptText="Hasło"
+                       styleClass="input"/>
+
+        <Button text="Zaloguj się"
+                onAction="#handleLogin"
+                styleClass="primary-button"/>
+
+        <Button text="Utwórz konto"
+                onAction="#openRegister"
+                styleClass="secondary-button"/>
+
+        <Label fx:id="messageLabel"
+               styleClass="error"/>
+
+    </VBox>
+</StackPane>

@@ -1,0 +1,281 @@
+/* OVERLAY */
+.overlay {
+    -fx-background-color: #f6f6f5;
+}
+
+/* DIALOG */
+.dialog {
+    -fx-background-color: white;
+    -fx-padding: 28;
+    -fx-background-radius: 22;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 35, 0.2, 0, 8);
+}
+
+/* HEADER */
+.header {
+    -fx-padding: 16 0;
+}
+
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #111111;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* PRIMARY BUTTON */
+.primary-button {
+    -fx-pref-width: 140;
+    -fx-padding: 12 0;
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-background-radius: 999;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0.2, 0, 3);
+}
+
+.primary-button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* CONTENT */
+.content {
+    -fx-padding: 16 0 0 0;
+}
+
+/* SECTION TITLE */
+.section-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #111111;
+}
+
+/* ========================= */
+/* LISTVIEW – LEKARZE        */
+/* ========================= */
+
+.card-list {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+}
+
+/* 🔑 DOMYŚLNY STAN – JUŻ WIDOCZNY */
+.card-list .list-cell {
+    -fx-background-color: #fafafa;           /* delikatnie ciemniejsze niż dialog */
+    -fx-padding: 16;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: #e5e5e5;               /* zawsze widoczna karta */
+    -fx-border-width: 1;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #111111;
+}
+
+/* HOVER – wyraźna interakcja */
+.card-list .list-cell:filled:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #000000;
+    -fx-cursor: hand;
+}
+
+/* FOCUS (klik / klawiatura) */
+.card-list .list-cell:focused {
+    -fx-border-color: #000000;
+    -fx-border-width: 1.5;
+}
+
+/* SELECTED – czytelny, nie czarny */
+.card-list .list-cell:selected {
+    -fx-background-color: #eaeaea;
+    -fx-border-color: #000000;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #111111;
+}
+
+/* SELECTED + HOVER */
+.card-list .list-cell:selected:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #111111;
+}
+
+/* pewność, że zawartość też jest ciemna */
+.card-list .list-cell:selected .label {
+    -fx-text-fill: #111111;
+}
+
+
+/* ========================= */
+/* TIME CHIPS                */
+/* ========================= */
+
+.time-chip {
+    -fx-padding: 10 16;
+    -fx-background-radius: 999;
+    -fx-background-color: #f4f4f4;
+    -fx-text-fill: #111111;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.time-chip:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.time-chip.selected {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}
+
+/* ========================= */
+/* COMBOBOX                  */
+/* ========================= */
+
+.choice {
+    -fx-pref-width: 360;
+    -fx-padding: 12 14;
+    -fx-background-color: white;
+    -fx-border-radius: 12;
+    -fx-border-color: #d1d1d1;
+    -fx-font-size: 14px;
+}
+
+.choice:focused {
+    -fx-border-color: #000000;
+    -fx-border-width: 1.5;
+}
+
+/* 🔴 FIX: tekst niewidoczny przy pierwszym renderze */
+.card-list .list-cell:filled {
+    -fx-text-fill: #111111;
+    -fx-opacity: 1;
+}
+
+/* dodatkowo upewniamy się, że label w środku też jest ciemny */
+.card-list .list-cell:filled .label {
+    -fx-text-fill: #111111;
+    -fx-opacity: 1;
+}
+
+/* ========================= */
+/* SCROLLBAR – MODERN        */
+/* ========================= */
+
+/* cała belka */
+.scroll-bar:vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+
+/* tło scrollbara */
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+/* „uchwyt” */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(0, 0, 0, 0.25);
+    -fx-background-radius: 999;
+}
+
+/* hover */
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* klik */
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* strzałki – wyłączamy */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+.step-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6b6b6b;
+    -fx-padding: 4 0 0 0;
+}
+
+/* SCROLLPANE – CLEAN */
+.content-scroll {
+    -fx-background-color: transparent;
+}
+
+.content-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ========================= */
+/* COMBOBOX DROPDOWN – CLEAN */
+/* ========================= */
+
+/* popup (cała lista) */
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e5e5e5;
+    -fx-padding: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 24, 0.25, 0, 8);
+}
+
+/* komórki */
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10 14;
+    -fx-font-size: 14px;
+    -fx-text-fill: #111111;
+    -fx-background-radius: 8;
+}
+
+/* hover */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #f4f4f4;
+}
+
+/* selected */
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}
+
+/* focused (klawiatura) */
+.combo-box-popup .list-cell:focused {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}
+
+/* scrollbar w dropdownie */
+.combo-box-popup .scroll-bar:vertical {
+    -fx-pref-width: 6;
+}
+
+.combo-box-popup .scroll-bar .thumb {
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-background-radius: 999;
+}
+
+.combo-box-popup .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+
+
+
+
+

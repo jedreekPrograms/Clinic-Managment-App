@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="app.PatientDashboardController"
+           stylesheets="/css/patientDashboard.css"
+           prefWidth="520"
+           prefHeight="600"
+           styleClass="overlay">
+
+    <VBox spacing="16"
+          alignment="TOP_CENTER"
+          styleClass="dialog"
+          prefHeight="560">
+
+
+
+        <!-- HEADER (NIE SCROLLUJE) -->
+        <HBox spacing="16" alignment="CENTER_LEFT" styleClass="header">
+            <Label text="Panel pacjenta" styleClass="header-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Wyloguj"
+                    onAction="#logout"
+                    styleClass="primary-button"/>
+        </HBox>
+
+        <!-- 🔽 SCROLLUJĄCY CONTENT -->
+        <ScrollPane fitToWidth="true"
+                    vbarPolicy="AS_NEEDED"
+                    hbarPolicy="NEVER"
+                    styleClass="content-scroll">
+
+            <VBox spacing="18" styleClass="content">
+
+                <Label text="1. Wybierz specjalizację" styleClass="step-title"/>
+                <ComboBox fx:id="specializationBox"
+                          promptText="Wybierz specjalizację"
+                          onAction="#loadDoctors"
+                          styleClass="choice"/>
+
+                <Label text="2. Wybierz lekarza" styleClass="step-title"/>
+                <ListView fx:id="doctorsList"
+                          styleClass="card-list"
+                          prefHeight="160"/>
+
+                <Label text="3. Wybierz termin" styleClass="step-title"/>
+                <FlowPane fx:id="timeGrid"
+                          hgap="10"
+                          vgap="10"
+                          prefWrapLength="460"/>
+
+                <Button text="Zapisz się"
+                        onAction="#book"
+                        styleClass="primary-button"/>
+
+                <Label text="Moje wizyty" styleClass="section-title"/>
+                <ListView fx:id="myVisitsList"
+                          styleClass="card-list"
+                          prefHeight="140"/>
+
+                <Button text="Odwołaj wizytę"
+                        onAction="#cancelVisit"
+                        styleClass="primary-button"/>
+
+            </VBox>
+        </ScrollPane>
+
+    </VBox>
+</StackPane>

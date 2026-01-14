@@ -1,0 +1,202 @@
+/* ========================= */
+/* OVERLAY                  */
+/* ========================= */
+.overlay {
+    -fx-background-color: #f6f6f5;
+}
+
+/* ========================= */
+/* DIALOG                   */
+/* ========================= */
+.dialog {
+    -fx-background-color: white;
+    -fx-padding: 28;
+    -fx-background-radius: 22;
+    -fx-max-width: 420;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.14), 40, 0.15, 0, 10);
+}
+
+/* ========================= */
+/* HEADER                   */
+/* ========================= */
+.header {
+    -fx-padding: 6 0 12 0;
+}
+
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #0f0f0f;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ========================= */
+/* CONTENT                  */
+/* ========================= */
+.content {
+    -fx-padding: 4 0 0 0;
+}
+
+/* ========================= */
+/* SECTION TITLE             */
+/* ========================= */
+.section-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6b6b6b;
+}
+
+/* ========================= */
+/* LIST VIEW                 */
+/* ========================= */
+.card-list {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+}
+
+/* ========================= */
+/* LIST CARD                 */
+/* ========================= */
+.card-list .list-cell {
+    -fx-background-color: #ffffff;
+    -fx-padding: 16;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: #e5e5e5;
+    -fx-border-width: 1;
+}
+
+/* ZAWSZE CZYTELNY TEKST */
+.card-list .list-cell .label {
+    -fx-text-fill: #111111;
+}
+
+/* HOVER */
+.card-list .list-cell:hover {
+    -fx-background-color: #f6f6f6;
+    -fx-border-color: #000000;
+}
+
+/* SELECTED */
+.card-list .list-cell:selected {
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #000000;
+}
+
+.card-list .list-cell:selected .label {
+    -fx-text-fill: #111111;
+}
+
+/* ========================= */
+/* PRIMARY BUTTON            */
+/* ========================= */
+.primary-button {
+    -fx-pref-width: 180;
+    -fx-padding: 14 0;
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 999;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-opacity: 0.92;
+}
+
+.primary-button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* ========================= */
+/* HEADER BUTTON (WYLOGUJ)   */
+/* ========================= */
+.header-button {
+    -fx-pref-width: 110;
+    -fx-padding: 8 0;
+    -fx-font-size: 13px;
+}
+
+/* ========================= */
+/* SECONDARY BUTTON          */
+/* ========================= */
+.secondary-button {
+    -fx-pref-width: 180;
+    -fx-padding: 14 0;
+    -fx-background-color: transparent;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 999;
+    -fx-text-fill: #111111;
+    -fx-font-size: 14px;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #f4f4f4;
+}
+
+/* ========================= */
+/* SCROLLBAR – MODERN        */
+/* ========================= */
+.scroll-bar:vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-background-radius: 999;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(0,0,0,0.4);
+}
+
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: rgba(0,0,0,0.55);
+}
+
+/* USUŃ STRZAŁKI */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+/* ========================= */
+/* LOGOUT BUTTON (HEADER)    */
+/* ========================= */
+.logout-button {
+    -fx-pref-width: 110;
+    -fx-padding: 8 0;
+    -fx-background-color: transparent;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 1.2;
+    -fx-border-radius: 999;
+    -fx-text-fill: #444444;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: #f4f4f4;
+    -fx-text-fill: #000000;
+}
+
+.logout-button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}

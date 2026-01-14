@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="app.AddSpecializationController"
+           stylesheets="/css/add-specialization.css"
+           styleClass="overlay"
+           prefWidth="420"
+           prefHeight="320">
+
+    <VBox alignment="CENTER"
+          spacing="18"
+          styleClass="dialog">
+
+        <Label text="Dodaj specjalizację"
+               styleClass="title"/>
+
+        <Label text="Wprowadź nazwę nowej specjalizacji"
+               styleClass="subtitle"/>
+
+        <TextField fx:id="specializationField"
+                   promptText="Nazwa specjalizacji"
+                   styleClass="input"/>
+
+        <Button text="Dodaj"
+                onAction="#handleAddSpecialization"
+                styleClass="primary-button"/>
+
+        <Label fx:id="messageLabel"
+               styleClass="error"/>
+
+    </VBox>
+</StackPane>

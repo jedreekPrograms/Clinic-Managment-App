@@ -1,0 +1,68 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    margin: 10px 0;
+}
+
+input, select, button {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+}
+
+input, select {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.error {
+    color: #ff6b6b;
+    margin-top: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.time-chip {
+    background: #2a2a2a;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.time-chip.selected {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #0f2027;
+}
